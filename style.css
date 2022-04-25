@@ -1,0 +1,184 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+header {
+    background-image: url(img2/banner.jpg);
+    padding: 200px 0;
+    color: mintcream;
+    position: relative;
+    z-index: 1;
+}
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+header hr {
+    margin-bottom: 20px;
+    border: 3px solid whitesmoke;
+    border-radius: 10px
+}
+header p {
+    max-width: 650px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.hr {
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+}
+.about {
+    background-color: #2A2F4A;
+    padding: 100px 0;
+    color: mintcream;
+}
+.about-content h2, .contacts h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.main-btn {
+    width: 220px;
+    height: 70px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 3px solid white;
+    font-size: 16px;
+    vertical-align: top;
+}
+.gallery li:nth-child(1) {
+    background-image: url(img2/pic01.jpg);
+}
+.gallery li:nth-child(2) {
+    background-image: url(img2/pic02.jpg);
+    grid-column: 2 / 4;
+}
+.gallery li:nth-child(3) {
+    background-image: url(img2/pic03.jpg);
+    grid-column: span 2;
+}
+.gallery li:nth-child(4) {
+    background-image: url(img2/pic04.jpg);
+}
+.gallery li:nth-child(5) {
+    background-image: url(img2/pic05.jpg);
+}
+.gallery li:nth-child(6) {
+    background-image: url(img2/pic06.jpg);
+    grid-column: 2 / 4;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,450px);
+    margin: 0;
+    padding: 0;
+}
+.gallery li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    position: relative;
+    z-index: 1;
+}
+.gallery h2 {
+    font-size: 43px;
+}
+.contacts {
+    color: white;
+    background-color: #242943;
+    padding: 100px 0;
+}
+.about-content p {
+    margin: 15px 0;
+}
+.contacts-form {
+    display: grid;
+    grid-template-areas: 
+    "ln le"
+    "n e"
+    "lm lm"
+    "m m"
+    "b ."
+    ;
+    grid-template-rows: auto 50px auto 150px 50px;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+#name {
+    grid-area: n;
+}
+#email {
+    grid-area: e;
+}
+#message {
+    grid-area: m;
+}
+label[for="name"] {
+    grid-area: ln;
+}
+label[for="email"] {
+    grid-area: le;
+}
+label[for="message"] {
+    grid-area: lm;
+}
+.contacts-form button {
+    grid-area: b;
+}
+.contacts-form input, .contacts-form textarea {
+    background-color: #2a2f4a;
+    border: none;
+}
+.contacts-form label, .contacts-form button {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.contacts-form button:hover {
+    background-color: #242943;
+}
+.gallery hr {
+    width: 305px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+header .cover, .gallery .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(14%, 15%, 26%, 0.7);
+    top: 0px;
+    z-index: -1;
+}
+.gallery .cover {
+
+} 
+.gallery li:nth-child(1) .cover {
+    background-color: rgba(122, 192, 216, 0.7);
+}
+.gallery li:nth-child(2) .cover {
+    background-color: rgba(143, 134, 193, 0.7);
+}
+.gallery li:nth-child(3) .cover {
+    background-color: rgba(229, 146, 137, 0.7);
+}
+.gallery li:nth-child(4) .cover {
+    background-color: rgba(223, 182,144, 0.7);
+}
+.gallery li:nth-child(5) .cover {
+    background-color: rgba(139, 161, 218, 0.7);
+}
+.gallery li:nth-child(6) .cover {
+    background-color: rgba(121, 174,150, 0.7);
+}
